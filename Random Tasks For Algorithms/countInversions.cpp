@@ -51,6 +51,7 @@ int inversionsCount(int* nums, int count) {
 
 	int* arr = new int[count];
 	int inversions = mergeSort(nums, arr, count);
+	delete[] arr;
 	return inversions;
 }
 
