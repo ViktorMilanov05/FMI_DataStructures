@@ -196,7 +196,7 @@ std::vector<int> Graph::diikstra(std::vector<std::vector<std::pair<int, int>>> a
 		pq.pop();
 		if (visited[currVertex])
 			continue;
-		visited[start] = true;
+		visited[currVertex] = true;
 		for (const auto& neighbor : adjs[currVertex]) {
 			if (neighbor.second + currWeight < distance[neighbor.first]) {
 				distance[neighbor.first] = neighbor.second + currWeight;
